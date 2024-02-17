@@ -1,6 +1,8 @@
 // import "./App.css";
 
 import { Typography, Stack, TextField, Button } from "@mui/material";
+import AddIcon from "@mui/icons-material/Add";
+import RemoveIcon from "@mui/icons-material/Remove";
 
 function App() {
     return (
@@ -26,8 +28,16 @@ function App() {
             </Stack>
 
             <Stack spacing={2} direction="row">
-                <Button variant="contained">Add</Button>
-                <Button variant="contained">Subtract</Button>
+                <Button variant="contained" endIcon={<AddIcon />}>
+                    Add
+                </Button>
+                <Button
+                    variant="contained"
+                    color="warning"
+                    endIcon={<RemoveIcon />}
+                >
+                    Subtract
+                </Button>
             </Stack>
         </Stack>
     );
