@@ -41,6 +41,7 @@ function App() {
                     Subtract
                 </Button>
             </Stack>
+            <Typography variant="h5">Calculated Result: </Typography>
         </Stack>
     );
 }
