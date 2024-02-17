@@ -27,6 +27,7 @@ function App() {
                     variant="outlined"
                     type="number"
                     value={number1}
+                    onChange={(e) => setNumber1(e.target.value)}
                 />
                 <TextField
                     id="number2"
@@ -34,6 +35,7 @@ function App() {
                     variant="outlined"
                     type="number"
                     value={number2}
+                    onChange={(e) => setNumber2(e.target.value)}
                 />
             </Stack>
 
