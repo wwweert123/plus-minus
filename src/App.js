@@ -19,11 +19,13 @@ function App() {
                     id="number1"
                     label="First number"
                     variant="outlined"
+                    type="number"
                 />
                 <TextField
                     id="number2"
                     label="Second number"
                     variant="outlined"
+                    type="number"
                 />
             </Stack>
 
