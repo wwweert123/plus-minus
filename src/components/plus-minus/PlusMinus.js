@@ -50,8 +50,8 @@ function PlusMinus() {
 
     const SubmitSubtract = async () => {
         const params = new URLSearchParams({
-            number1: number1,
-            number2: number2,
+            number1: number1 ? number1 : 0,
+            number2: number2 ? number2 : 0,
         });
         try {
             const response = await axios.post(SUBTRACT_ENDPOINT, params, {
@@ -108,6 +108,7 @@ function PlusMinus() {
                     variant="contained"
                     endIcon={<AddIcon />}
                     onClick={SubmitAdd}
+                    data-testid="addBtn"
                 >
                     Add
                 </Button>
@@ -116,11 +117,14 @@ function PlusMinus() {
                     color="warning"
                     endIcon={<RemoveIcon />}
                     onClick={SubmitSubtract}
+                    data-testid="subtractBtn"
                 >
                     Subtract
                 </Button>
             </Stack>
-            <Typography variant="h5">Calculated Result: {result}</Typography>
+            <Typography variant="h5" data-testid="result">
+                Calculated Result: {result}
+            </Typography>
         </Stack>
     );
 }
